@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {CommunicationService} from "../communication.service";
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-users',
@@ -10,12 +9,13 @@ import {Observable} from "rxjs";
 export class UsersComponent implements OnInit {
 
   messages: string[] = [];
+  color: string;
 
   constructor(private communication: CommunicationService){}
 
   ngOnInit() {
     this.communication.getMessages().subscribe((description: string) => {
         this.messages.push(description);
-      });
+    });
   }
 }

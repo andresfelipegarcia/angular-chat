@@ -9,18 +9,20 @@ import { CommunicationService } from './communication.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ColorPipe } from './app.color';
 
 const appRoutes: Routes = [
-  {path: 'users', component: UsersComponent},
+  {path: 'clients', component: UsersComponent},
   {path: 'news', component: NewsComponent}
+  {path: '', component: NewsComponent}
 ]
-
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
-    UsersComponent
+    UsersComponent,
+    ColorPipe
   ],
   imports: [
     BrowserModule,

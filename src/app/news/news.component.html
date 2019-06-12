@@ -1,6 +1,10 @@
-
-<div class="col-md-12">
-  <input [(ngModel)]="description">
-  <button type="button" class="btn btn-primary" (click)="sendMessage()">Send</button>
+<div class="col-md-4">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">New News</label>
+    <textarea [(ngModel)]="description" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="sendMessage()">Send</button>
+  </div>
 </div>
+
 
